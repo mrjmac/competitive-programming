@@ -2,6 +2,4 @@
 
 A repo for all competitive programming practice problems I do
 
-# blob
-
-A very simple dfs implementation
+More info at https://mrjmac.github.io/cp.html
