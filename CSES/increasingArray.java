@@ -1,21 +1,26 @@
-import java.util.*;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class increasingArray {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
-        Scanner input = new Scanner(System.in);
-        int test = input.nextInt();
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+        StringTokenizer st = new StringTokenizer(r.readLine());
+
+        int test = Integer.parseInt(st.nextToken());
         long moves = 0;
         //code added so vscode stops yelling at me
         moves += test;
         moves -= test;
         //done
-        int last = input.nextInt();
+        st = new StringTokenizer(r.readLine());
+        int last = Integer.parseInt(st.nextToken());
         int curr = 0;
 
-        while (input.hasNextInt())
+        while (st.hasMoreTokens())
         {
-            curr = input.nextInt();
+            curr = Integer.parseInt(st.nextToken());
             if (curr < last)
             {
                 moves += last - curr;
@@ -23,8 +28,8 @@ public class increasingArray {
             }
             last = curr;
         }
-        System.out.println(moves);
+        pw.println(moves);
 
-        input.close();
+        pw.close();
     }
 }

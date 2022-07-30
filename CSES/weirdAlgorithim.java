@@ -1,10 +1,15 @@
-import java.util.*;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class weirdAlgorithim {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
-        Scanner input = new Scanner(System.in);
-        long a = input.nextLong();
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(System.out);
+
+		StringTokenizer st = new StringTokenizer(r.readLine());
+
+        long a = Integer.parseInt(st.nextToken());
         String output = a + " ";
         while (a != 1)
         {
@@ -18,8 +23,8 @@ public class weirdAlgorithim {
             }
             output += a + " ";
         }
-        System.out.println(output);
+        pw.println(output);
 
-        input.close();
+        pw.close();
     }
 }

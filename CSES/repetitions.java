@@ -1,10 +1,14 @@
-import java.util.*;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class repetitions {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
-        Scanner input = new Scanner(System.in);
-        String test = input.next();
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+        StringTokenizer st = new StringTokenizer(r.readLine());
+
+        String test = st.nextToken();
         int max = 1;
         int count = 1;
 
@@ -24,8 +28,8 @@ public class repetitions {
                 count = 1;
             }
         }
-        System.out.println(max);
+        pw.println(max);
 
-        input.close();
+        pw.close();
     }
 }

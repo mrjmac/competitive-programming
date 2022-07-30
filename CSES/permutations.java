@@ -1,28 +1,32 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class permutations {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
-        Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(System.out);
+
+        StringTokenizer st = new StringTokenizer(r.readLine());
+        int num = Integer.parseInt(st.nextToken());
 
         if (num == 3 || num == 2)
         {
-            System.out.println("NO SOLUTION");
+            pw.println("NO SOLUTION");
         }
         else
         {
             for (int i = 2; i <= num; i += 2)
             {
-                System.out.print(i + " ");
+                pw.print(i + " ");
             }
 
             for (int i = 1; i <= num; i += 2)
             {
-                System.out.print(i + " ");
+                pw.print(i + " ");
             }
         }
 
-        scanner.close();
+        pw.close();
     }
 }

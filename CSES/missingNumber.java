@@ -1,20 +1,25 @@
-import java.util.*;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class missingNumber {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
-        Scanner input = new Scanner(System.in);
-        long a = input.nextInt();
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+        StringTokenizer st = new StringTokenizer(r.readLine());
+
+        long a = Integer.parseInt(st.nextToken());
         long total = (a * (a + 1))/2;
         long incom = 0;
 
-        while (input.hasNext())
+        st = new StringTokenizer(r.readLine());
+        while (st.hasMoreTokens())
         {
-            incom += input.nextInt();
+            incom += Integer.parseInt(st.nextToken());
         }
 
-        System.out.println((total - incom));
+        pw.println((total - incom));
 
-        input.close();
+        pw.close();
     }
 }
