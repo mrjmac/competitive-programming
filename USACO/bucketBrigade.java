@@ -39,9 +39,9 @@ public class bucketBrigade {
         int ans = Math.abs(BX - LX) + Math.abs(BY - LY) - 1;
 
         if (BY == LY && BY == RY && ((LX < RX && RX < BX) || (BX < RX && RX < LX)))
-		{
+        {
 			ans += 2;
-		}
+        }
         else if (BX == LX && BX == RX && ((LY < RY && RY < BY) || (BY < RY && RY < LY)))
         {
             ans += 2;

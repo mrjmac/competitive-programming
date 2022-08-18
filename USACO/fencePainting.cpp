@@ -6,7 +6,7 @@ int main()
 {
     //cin.tie(0)->sync_with_stdio(0);
     freopen("paint.in", "r", stdin);
-	freopen("paint.out", "w", stdout);
+    freopen("paint.out", "w", stdout);
 
     int a, b, c, d;
     cin >> a >> b >> c >> d;

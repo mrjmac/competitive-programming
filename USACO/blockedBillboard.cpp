@@ -25,9 +25,9 @@ int main()
 	freopen("billboard.out", "w", stdout);
 
     board truck, ba, bb;
-    cin >> ba.x1 >> ba.y1 >> ba.x2 >> ba.y2;
+	cin >> ba.x1 >> ba.y1 >> ba.x2 >> ba.y2;
 	cin >> bb.x1 >> bb.y1 >> bb.x2 >> bb.y2;
 	cin >> truck.x1 >> truck.y1 >> truck.x2 >> truck.y2;
-
+	
 	cout << ba.area() + bb.area() - (overlap(ba, truck) + overlap(bb, truck));
 }
