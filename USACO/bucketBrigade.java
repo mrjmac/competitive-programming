@@ -40,7 +40,7 @@ public class bucketBrigade {
 
         if (BY == LY && BY == RY && ((LX < RX && RX < BX) || (BX < RX && RX < LX)))
         {
-			ans += 2;
+	    ans += 2;
         }
         else if (BX == LX && BX == RX && ((LY < RY && RY < BY) || (BY < RY && RY < LY)))
         {
