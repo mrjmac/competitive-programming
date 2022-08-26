@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    cin.tie(0)->sync_with_stdio(0);
     freopen("shell.in", "r", stdin);
     freopen("shell.out", "w", stdout);
 

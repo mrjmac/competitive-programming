@@ -19,7 +19,7 @@ int overlap(board a, board b)
 
 int main()
 {
-    //cin.tie(0)->sync_with_stdio(0);
+    cin.tie(0)->sync_with_stdio(0);
     freopen("billboard.in", "r", stdin);
     freopen("billboard.out", "w", stdout);
 
