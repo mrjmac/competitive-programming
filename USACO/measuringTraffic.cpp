@@ -42,6 +42,8 @@ int main()
 
     cout << small << " " << large << "\n";
 
+    int large = 1e9, small = -large;
+    
     for (int i = 0; i < n; i++)
     {
         if (type[i] == "off")
