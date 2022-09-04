@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-//old java code ignore
 public class increasingArray {
     public static void main(String args[]) throws IOException
     {

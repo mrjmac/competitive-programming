@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-//old java code ignore
 public class promotionCounting {
     public static void main(String[] args) throws IOException
     {
