@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.io.*;
 
+//old java code ignore
 public class doYouKnowYourABCs {
     public static void main(String[] args) throws IOException
     {

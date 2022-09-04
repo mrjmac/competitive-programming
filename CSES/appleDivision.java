@@ -2,6 +2,7 @@ import java.util.StringTokenizer;
 import java.io.*;
 import java.util.ArrayList;
 
+//old java code ignore
 public class appleDivision {
     static int n;
     static int[] nums;

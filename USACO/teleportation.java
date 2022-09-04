@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
+//old java code ignore
 public class teleportation {
     public static void main(String[] args) throws IOException
     {

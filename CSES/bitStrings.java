@@ -2,6 +2,7 @@ import java.io.*;
 import java.math.BigDecimal;
 import java.util.StringTokenizer;
 
+//old java code ignore
 public class bitStrings {
     public static void main(String args[]) throws IOException
     {
