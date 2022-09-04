@@ -1,6 +1,6 @@
 import java.util.StringTokenizer;
 import java.io.*;
-
+//ignore old java code
 public class wordProcessor {
     public static void main(String[] args) throws IOException
     {

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-
+//ignore old java code
 public class creatingStrings {
 
     static ArrayList<String> combs = new ArrayList<String>();

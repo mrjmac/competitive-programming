@@ -1,7 +1,7 @@
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.StringTokenizer;
-
+//ignore old java code
 public class bitStrings {
     public static void main(String args[]) throws IOException
     {

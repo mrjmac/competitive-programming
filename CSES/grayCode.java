@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.StringTokenizer;
-
+//ignore old java code
 public class grayCode {
     public static void main(String[] args) throws IOException
     {

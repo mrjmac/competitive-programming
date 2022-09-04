@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.StringTokenizer;
-
+//ignore old java code
 public class palindromeReorder {
     public static void main(String[] args) throws IOException
     {

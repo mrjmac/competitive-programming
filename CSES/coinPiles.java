@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 
-
+//ignore old java code
 public class coinPiles {
     public static void main(String[] args) throws IOException
     {

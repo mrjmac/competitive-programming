@@ -1,7 +1,7 @@
 import java.util.StringTokenizer;
 import java.io.*;
 import java.util.ArrayList;
-
+//ignore old java code
 public class appleDivision {
     static int n;
     static int[] nums;
