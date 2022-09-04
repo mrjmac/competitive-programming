@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.StringTokenizer;
-//ignore old java code
+//ignore old java code test
 public class bucketBrigade {
     public static void main(String[] args) throws IOException
     {
