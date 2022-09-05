@@ -3,12 +3,13 @@ using namespace std;
 
 int main()
 {
+    cin.tie(0)->sync_with_stdio(0);
     int num;
     cin >> num;
 
     if (num == 3 || num == 2)
     {
-        cout << "NO SOLUTION" << endl;
+        cout << "NO SOLUTION" << "\n";
     }
     else
     {
