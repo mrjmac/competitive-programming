@@ -4,16 +4,17 @@ using namespace std;
 
 bool pieces[11][8][8];
 vector<int> s[11];
+int n;
 
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
 
-    int n, k, left, right, top, bottom;
+    int k, left, right, top, bottom;
     cin >> n >> k;
     char c;
     
-    for (int i = 0 ; i <= k; i++)
+    for (int i = 0; i <= k; i++)
     {
         left = n - 1;
         right = 0;
@@ -46,9 +47,9 @@ int main()
             {
                 for (int idy = s[i][1] - n + 1; idy <= s[i][0]; idy++)
                 {
-                    for (int jdx = s[j][3] - n + 1; idx <= s[j][2]; jdx++)
+                    for (int jdx = s[j][3] - n + 1; jdx <= s[j][2]; jdx++)
                     {
-                        for (int jdy = s[j][1] - n + 1; idy <= s[j][0]; idy++)
+                        for (int jdy = s[j][1] - n + 1; jdy <= s[j][0]; jdy++)
                         {
                             bool ok = true;
                             for (int x = 0; x < n; x++)
@@ -85,6 +86,5 @@ int main()
                 }
             }
         }
-    }
-    
+    }   
 }
