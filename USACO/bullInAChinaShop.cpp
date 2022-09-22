@@ -9,6 +9,8 @@ int n;
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
+    freopen("bcs.in", "r", stdin);
+    freopen("bcs.out", "w", stdout);
 
     int k, left, right, top, bottom;
     cin >> n >> k;
