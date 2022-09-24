@@ -31,19 +31,19 @@ int main()
 
             for (int k = 0; k < n; k++)
             {
-                if (cows[k].first < fences[i]. first && cows[k].second > fences[j].second)
+                if (cows[k].first < fences[i].first && cows[k].second > fences[j].second)
                 {
                     tl++;
                 }
-                else if (cows[k].first > fences[i]. first && cows[k].second > fences[j].second)
+                else if (cows[k].first > fences[i].first && cows[k].second > fences[j].second)
                 {
                     tr++;
                 }
-                else if (cows[k].first < fences[i]. first && cows[k].second < fences[j].second)
+                else if (cows[k].first < fences[i].first && cows[k].second < fences[j].second)
                 {
                     bl++;
                 }
-                else if (cows[k].first > fences[i]. first && cows[k].second < fences[j].second)
+                else if (cows[k].first > fences[i].first && cows[k].second < fences[j].second)
                 {
                     br++;
                 }
