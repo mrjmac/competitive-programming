@@ -5,7 +5,6 @@ using namespace std;
 int n;
 long long weights[20];
 
-
 long long solve(int i, long long s1, long long s2)
 {
     if (i == n)
@@ -15,7 +14,6 @@ long long solve(int i, long long s1, long long s2)
 
     return min(solve(i + 1, s1 + weights[i], s2), solve(i + 1, s1, s2 + weights[i]));
 }
-
 
 int main()
 {
