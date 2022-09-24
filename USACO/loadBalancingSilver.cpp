@@ -38,8 +38,8 @@ int findBal(int x_line, const vector<pair<int, int>> cows)
 
         int bmax = max(left_at, right_at);
         int amax = max(left.size() - left_at, right.size() - right_at);
-        
-        mostbal = min({mostbal, amax, bmax});
+
+        mostbal = min(mostbal, max(amax, bmax));
     }
 
     return mostbal;
@@ -48,6 +48,9 @@ int findBal(int x_line, const vector<pair<int, int>> cows)
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
+    freopen("balancing.in", "r", stdin);
+    freopen("balancing.out", "w", stdout);
+    
     int n;
     cin >> n;
 
