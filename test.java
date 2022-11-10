@@ -9,7 +9,6 @@ public class test {
         StringTokenizer st = new StringTokenizer(r.readLine());
 
         int n = Integer.parseInt(st.nextToken());
-        pw.println(n);
 
         pw.close();
     }
