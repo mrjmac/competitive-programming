@@ -10,6 +10,8 @@ public class test {
 
         int n = Integer.parseInt(st.nextToken());
 
+        pw.println(n);
+
         pw.close();
     }
 }
