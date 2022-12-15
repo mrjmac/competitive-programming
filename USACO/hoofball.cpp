@@ -2,56 +2,65 @@
 
 using namespace std;
 
-int n;
-vector<int> cows(100);
+int n, cows[100], passes[100];
 
-int solve(int pos, int ans, int dir, int limit)
+int whoPass(int cow)
 {
-    if ((pos == 0 && dir == -1) || (pos == n && dir == 1))
-    {
-        return ans;
-    }
-    
-    int L = cows[pos] - cows[pos - 1];
-    int R = cows[pos + 1] - cows[pos];
+    int left = -1, right = -1, lr = 1000, rr = 1000;
 
-    
-    if (L > R)
+    for (int i = 0; i < n; i++)
     {
-        if (dir == 1)
+        if (cows[i] < cows[cow] && cows[cow] - cows[i] < lr)
         {
-            solve(pos + 1, ans, 1, limit);
+            left = i;
+            lr = cows[cow] - cows[i];
         }
-        if (dir == -1)
+        if (cows[i] > cows[cow] && cows[i] - cows[cow] < rr)
         {
-            solve(pos - 1, ans, -1, limit);
+            right = i;
+            rr = cows[i] - cows[cow];
         }
     }
-    else
-    {
-        solve(limit, ans + 1, dir * -1, pos);
-        //return 0;
-    }
-    
 
-    return 0;
+    if (lr <= rr)
+    {
+        return left;
+    }
+    return right;
+
 }
 
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
+    freopen("hoofball.in", "r", stdin);
+    freopen("hoofball.out", "w", stdout);
 
-    int ans = 1;
     cin >> n;
+    int ans = 0;
 
     for (int i = 0; i < n; i++)
     {
         cin >> cows[i];
     }
 
-    sort(cows.begin(), cows.end());
+    for (int i = 0 ; i < n; i++)
+    {
+        passes[whoPass(i)]++;
+    }
 
-    ans = solve(1, ans, 1, n);
+    for (int i = 0; i < n; i++)
+    {
+        if (passes[i] == 0)
+        {
+            ans += 1;
+        }
+
+        if (i < whoPass(i) && whoPass(whoPass(i)) == i && passes[i] == 1 && passes[whoPass(i)] == 1)
+        {
+            ans += 1;
+        }
+    }
 
     cout << ans << "\n";
 
