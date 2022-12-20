@@ -9,16 +9,17 @@ int main()
     int n, q;
     cin >> n >> q;
 
-    vector<long long> a(n);
+    vector<long long> prefix(n + 1);
+    prefix[0] = 0;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        cin >> a[i];
+        cin >> prefix[i];
     }
 
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        a[i] += a[i - 1];
+        prefix[i] += prefix[i - 1];
     } 
 
     for (int i = 0; i < q; i++)
@@ -26,6 +27,6 @@ int main()
         int li, ri;
         cin >> li >> ri;
 
-        cout << a[ri - 1] - (li ? a[li - 1] : 0) << "\n";
+        cout << prefix[ri] - prefix[li] << "\n";
     }
 }
