@@ -35,7 +35,7 @@ int main()
     int ans = 0;
     for (int i = k; i < rotate - k; i++)
     {
-        for (int j = k; j < rotate - j; j++)
+        for (int j = k; j < rotate - k; j++)
         {
             ans = max(ans, prefix[i + k + 1][j + k + 1] - prefix[i + k + 1][j - k] - prefix[i - k][j + k + 1] + prefix[i - k][j - k]);
         }
