@@ -27,13 +27,15 @@ public class Rishita {
                 m.put(id, course);
                 map.put(college, m);
             }
+
+            b.close();
         }
 
-        Set keys = map.keySet();
+        Set<String> keys = map.keySet();
         for (Object key : keys)
         {
             System.out.println(key);
-            Set keys2 = map.get(key).keySet();
+            Set<String> keys2 = map.get(key).keySet();
             for (Object key2 : keys2)
             {
                 System.out.println("   " + key2 + "   " + map.get(key).get(key2));
