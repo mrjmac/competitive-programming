@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+// possibly the smartest coin change solution of all time 
 public class Coin {
     public static void main(String args[]) throws IOException
     {
