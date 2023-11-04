@@ -11,12 +11,18 @@ public class Marching {
         {
             int y = test.nextInt();
             int x = test.nextInt();
+            test.nextLine();
 
             char[][] map = new char[y + 1][x + 1];
 
             for (int j = 0; j <= y; j++)
             {
-                map[j] = test.nextLine().toCharArray();
+                String curr = test.nextLine();
+                for (int k = 0; k <= x; k++)
+                {
+                    char currChar = curr.charAt(k);
+                    //if (currChar >= 'a' )
+                }
             }
 
             System.out.println(Arrays.toString(map));
