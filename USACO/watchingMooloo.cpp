@@ -16,8 +16,6 @@ int main()
         cin >> days[i];
     }
 
-    sort(days.begin(), days.end());
-
     long long prev = days[0];
     long long ans = k + 1;
 
