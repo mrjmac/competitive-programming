@@ -21,30 +21,15 @@ int main()
     long long ans = 0;
     long long cowAns = 0;
 
-    int idx = 0;
-    int prevMin = tuition[0];
-    int gapSize = 0;
-
-    for (long long i : tuition)
+    for (int i = 0; i < n; i++)
     {
-        if (i > prevMin)
-        {
-            idx += gapSize;
-            prevMin = i;
-            gapSize = 1;
-        }
-        else
-        {
-            gapSize += 1;
-        }
-        long long curr = n - idx;
+        long long curr = (long long) tuition[i] * (n - i);
 
-        if (curr * i > ans)
+        if (curr > ans)
         {
-            ans = curr * i;
-            cowAns = i;
+            ans = curr;
+            cowAns = tuition[i];
         }
-
     }
 
     cout << ans << " " << cowAns << "\n";
