@@ -12,6 +12,7 @@ int main()
     while (a != 1)
     {
         cout << a << " ";
+        
         if (a % 2 == 0)
         {
             a /= 2;
@@ -21,5 +22,6 @@ int main()
             a = (a * 3) + 1;
         }
     }
+
     cout << a << " ";
 }
