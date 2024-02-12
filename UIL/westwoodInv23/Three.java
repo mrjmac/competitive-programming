@@ -11,15 +11,10 @@ public class Three {
 
         for (int i = 0; i < n; i++)
         {
-
-            
             
             int first = note(test.next());
             int second = note(test.next());
             int third = note(test.next());
-
-
-
             
             if (first > second)
             {
