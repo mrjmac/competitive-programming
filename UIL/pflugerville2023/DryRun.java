@@ -12,5 +12,5 @@ public class DryRun {
         {
             System.out.println("I like " + test.nextLine() + ".");
         }
-    }  
+    }
 }
