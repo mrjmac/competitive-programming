@@ -6,38 +6,28 @@ int main()
 {
     cin.tie(0)->sync_with_stdio(0);
 
-    int n;
+    int n, big = 0;
     cin >> n;
 
     vector<int> temp(n, 0);
-
-    int big;
-    cin >> big;
-
-    temp[0] = big;
-
-    for (int i = 1; i < n; i++)
-    {
-        cin >> temp[i];
-
-        big = max (temp[i], big);
-    }
-
-    vector<int> freq(max(big + 1, n + 1), 0);
+    vector<long long> count(100005, 0);
+    vector<long long> dp(100005, 0);
 
     for (int i = 0; i < n; i++)
     {
-        freq[temp[i]]++;
+        cin >> temp[i];
+
+        count[temp[i]]++;
+        big = max(big, temp[i]);
     }
 
-    vector<long long> dp(n + 1, 0);
     dp[0] = 0;
-    dp[1] = freq[1];
+    dp[1] = count[1];
 
-    for (int i = 2; i <= n; i++)
+    for (int i = 2; i <= big; i++)
     {
-        dp[i] = max(dp[i - 1], dp[i - 2] + (1ll * freq[i] * i));
+        dp[i] = max(dp[i - 1], i * count[i] + dp[i - 2]);
     }
 
-    cout << dp[n] << "\n";
+    cout << dp[big] << "\n";
 }

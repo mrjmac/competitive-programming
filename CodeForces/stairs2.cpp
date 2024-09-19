@@ -16,17 +16,17 @@ int main()
 
     for (int i = 1; i <= n; i++)
     {
-        dp[i] = curr;
+        dp[i] = (curr % 998244353);
 
         if (i >= m)
         {
             curr -= dp[i - m];
         }
 
-        curr += dp[i];
+        curr += (dp[i] % 998244353);
         curr %= 998244353;
     }
 
-    cout << dp[n] << "\n";
+    cout << ((dp[n] + 998244353) % 998244353) << "\n";
     
 }
